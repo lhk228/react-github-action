@@ -1,0 +1,225 @@
+.detail {
+  background-color: white;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .detail_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+
+    .detail_header_info {
+      width: 100%;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      .detail_header_title {
+        font-family: PretendardB;
+        color: $main;
+      }
+      .detail_header_title_container {
+        display: flex;
+        align-items: end;
+        gap: 10px;
+      }
+      .detail_header_target {
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 4px;
+      }
+    }
+  }
+
+  .detail_header_open_popup {
+    position: absolute;
+    right: 0;
+    background-color: $main;
+    color: #fff;
+    font-weight: bold;
+  }
+  .detail_body {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 50px;
+
+    .row {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .row_text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+  .detail_body_content {
+    &_top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+    }
+    &_bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      place-items: center;
+      grid-gap: 50px;
+    }
+    &_container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: space-between;
+    }
+    &_wrap {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .detail_body_title_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .detail_body_title {
+    font-size: 18px;
+    font-family: PretendardB;
+  }
+
+  .dection_image_select_container {
+    display: flex;
+    gap: 10px;
+  }
+
+  .dection_image_list_wrap {
+    font-size: 18px;
+    padding: 6px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px #eee solid;
+
+    button {
+      cursor: pointer;
+      background-color: $main;
+      color: #fff;
+    }
+  }
+}
+
+.color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  position: relative;
+  top: 2px;
+  border: 1px solid #888;
+  margin-right: 10px;
+}
+
+.dection_image_list_container {
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  margin-top: 8px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.detection_image_container {
+  padding: 0.5rem;
+  margin-top: 8px;
+  width: 100%;
+  height: 300px;
+  border: 3px dashed #eee;
+
+  img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.detection_image_container_popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+
+  figure {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+  }
+
+  img {
+    width: 550px;
+    height: 550px;
+  }
+  &_slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 30px;
+
+    span {
+      font-size: 16px;
+    }
+  }
+  &_slider_init {
+    font-weight: bold;
+    padding: 1rem 2.3rem 0.2rem 0;
+    float: right;
+    cursor: pointer;
+  }
+}
+.ant-modal-content {
+  overflow-y: scroll;
+}
+
+// 이미지 view 누르기 전 result 커스텀
+.ant-result,
+.ant-result,
+:where(.css-rzke93).ant-result {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-result .ant-result-icon > .anticon,
+.ant-result .ant-result-icon > .anticon {
+  font-size: 48px !important;
+}
+.ant-result-info .ant-result-icon > .anticon,
+.ant-result-info .ant-result-icon > .anticon {
+  color: $main;
+}
+
+// 이미지 슬라이더
+.ant-slider-horizontal,
+.ant-slider {
+  width: 90%;
+}
+.ant-slider .ant-slider-track {
+  background-color: $main;
+}
+.transform-component-module_wrapper__SPB86 {
+  border: 1px solid #cecece;
+}

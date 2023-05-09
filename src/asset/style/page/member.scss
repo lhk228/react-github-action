@@ -1,0 +1,72 @@
+// 회원관리 style
+.page-title { font-weight:600; color:$main;}
+.page-header { 
+	width:100%;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+// 버튼
+.btn-wrap { 
+	display:flex; justify-content: flex-end;
+	margin:5px 0;
+}
+.btn { 
+	display:flex; justify-content: center; align-items: center;
+	padding:8px 16px; margin-left:5px;
+	border:none; border-radius:5px;
+	outline:none;
+	letter-spacing: 0;
+	cursor:pointer;
+	transition:.3s;
+	&:hover { opacity:0.7; }
+}
+
+.btn-member-reg { background:$main; color:#fff; }
+.btn-confirm { background:$main; color:#fff; }
+.btn-cancel { background:$gray; color:#444; }
+.btn-popup-close { 
+	background:transparent;
+	border:none; outline:none;
+	transform:rotate(45deg);
+	position:absolute; right:5px;
+	font-size:20px;
+	cursor:pointer;
+	transition:.3s;
+	&:hover { opacity:0.5; }
+}
+// 회원목록 테이블
+.member {
+	.ant-table-row {
+		cursor:pointer!important;
+	}
+}
+
+// 등록팝업 input
+.input-wrap {
+	width:100%;
+	margin:4px 0;
+	.input-title {
+		padding:4px 0;
+	}
+	input {
+		padding: 8px;
+		border:1px solid #ddd;
+		// border:1px solid $main;
+		height: 40px;
+		border-radius: 8px;
+		width: 100%;
+		transition:.3s;
+		&:focus { border:1px solid $main; }
+		&::placeholder { color:#bbb; }
+	}
+}
+
+// 드롭다운 ant 변경
+.ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) { 
+	color:#fff!important; background:$main!important;
+	font-weight:300!important;
+}
+
+// 모달팝업 ant 변경
+.ant-modal-title { color:$main!important; }

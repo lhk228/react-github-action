@@ -1,0 +1,19 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  only:
+    - main
+  script:
+    - echo "READY --START"
+    - cd /etc/nginx/windetect
+    - sudo git pull origin main
+    - sudo npm install
+    - sudo npm run build
+    - sudo systemctl restart nginx
+  cache:
+    paths:
+      - node_modules/
+  tags:
+    - dev-all

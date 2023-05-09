@@ -1,0 +1,136 @@
+@mixin level-bar($bgColor) {
+  width: (100% / 6);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $bgColor;
+}
+
+.list {
+  .list_box_wrap {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: flex-end;
+    justify-content: space-between;
+    .select-box {
+      display: flex;
+      gap: 10px;
+    }
+    .list_box_btn {
+      background-color: $gray;
+      border: none;
+      cursor: pointer;
+
+      &_init {
+        border:1px solid #bbb;
+        color:#666;
+        box-shadow:none!important;
+      }
+
+      &_init:hover {
+        border:1px solid #444;
+        background:#fff;
+        color:#444;
+        
+      }
+    }
+    .level-container {
+      display: flex;
+      width: 300px;
+      align-items: center;
+      p {
+        width: 60px;
+        font-weight: 600;
+        color: #444;
+        font-size: 14px;
+      }
+      .level-bar-container {
+        border: 1px solid #ddd;
+        width: calc(100% - 60px);
+        height: 8px;
+        border-radius: 5px;
+        display: flex;
+        position: relative;
+        .level-bar:nth-child(1) {
+          @include level-bar(#cbcccc);
+        }
+        .level-bar:nth-child(2) {
+          @include level-bar($blue);
+        }
+        .level-bar:nth-child(3) {
+          @include level-bar($green);
+        }
+        .level-bar:nth-child(4) {
+          @include level-bar($yellow);
+        }
+        .level-bar:nth-child(5) {
+          @include level-bar($orange);
+        }
+        .level-bar:nth-child(6) {
+          @include level-bar($red);
+        }
+        .level-bar span {
+          position: absolute;
+          top: -20px;
+          font-size: 12px;
+          color: #444;
+        }
+      }
+    }
+  }
+}
+
+
+.main-table {
+  .ant-table { height:605px; }
+  .ant-table-cell { height:55px; padding:0 16px!important; }
+}
+.ant-select-dropdown
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: $gray;
+}
+
+// 페이지네이션 커스텀
+.ant-table-wrapper .ant-table-pagination-right {
+  justify-content: center;
+}
+.ant-table-wrapper .ant-table-pagination.ant-pagination,
+.ant-table-wrapper .ant-table-pagination.ant-pagination,
+.ant-table-wrapper .ant-table-pagination.ant-pagination {
+  display: flex;
+  justify-content: center;
+  margin: 48px;
+}
+
+.ant-pagination .ant-pagination-prev,
+.ant-pagination .ant-pagination-next,
+.ant-pagination .ant-pagination-jump-prev,
+.ant-pagination .ant-pagination-jump-next,
+.ant-pagination .ant-pagination-prev,
+.ant-pagination .ant-pagination-next,
+.ant-pagination .ant-pagination-jump-prev,
+.ant-pagination .ant-pagination-jump-next {
+  min-width: 42px;
+  height: 42px;
+}
+
+.ant-pagination .ant-pagination-item,
+.ant-pagination .ant-pagination-item,
+.ant-pagination .ant-pagination-item {
+  min-width: 42px;
+  height: 42px;
+  font-size: 18px;
+  padding: 4px 4px;
+}
+
+.ant-pagination .ant-pagination-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 18px;
+}
+
+.ant-form-item {
+  margin-bottom: 0;
+}

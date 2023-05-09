@@ -1,0 +1,21 @@
+// ToastAlert
+@mixin ToastAlert($bgColor, $Color)
+{
+	position:fixed; left:50%; bottom:0;
+	transform:translateX(-50%);
+	box-shadow:0 0 5px 0 rgba(0,0,0,0.2);
+	display:flex; justify-content: flex-start; align-items: center;
+	padding:8px 16px;
+	background:$bgColor;
+	color:$Color;
+	border-radius:5px;
+	transition:.3s;
+	opacity:0;
+	min-height:60px;
+	z-index:1001;
+}
+
+.alert { @include ToastAlert(rgb(255, 206, 115), #666) }
+.ok { @include ToastAlert(rgba(34, 34, 255, 0.8), #fff) }
+.warn { @include ToastAlert(rgba(255, 34, 0, 0.86), #fff) }
+.alert-container.open { bottom:10%; opacity:1; }
